@@ -1,0 +1,200 @@
+{
+    "rangeSeeds": [
+        {
+            "file": "demo/src/main/resources/templates/Accueil.html",
+            "seeds": [
+                {
+                    "id": "022cb89d-96a7-4714-8a01-c50899df268b",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/AccueilNew.html",
+            "seeds": [
+                {
+                    "id": "bc7982e3-58cb-4adc-a486-d88f5b838d8b",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/Navbar.html",
+            "seeds": [
+                {
+                    "id": "265bcb88-1b37-429c-bf64-16b05202587d",
+                    "featureKey": "b59fb3f3-9d39-45f8-9d2d-f522bb569482",
+                    "startLine": 12,
+                    "startColumn": 53,
+                    "endLine": 12,
+                    "endColumn": 71,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/ChangeCoordPro.html",
+            "seeds": [
+                {
+                    "id": "aea352fc-0a6c-44b6-84b7-93fe1fee66b3",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/ChangeCoordUser.html",
+            "seeds": [
+                {
+                    "id": "156d4f10-8e63-4e1e-8271-ebd2e534cc00",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/Disponibilite.html",
+            "seeds": [
+                {
+                    "id": "c45164c9-b0f9-4dec-9953-51ca645fb508",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/InscriptionPro.html",
+            "seeds": [
+                {
+                    "id": "c879b81c-8fda-437a-94e4-2c0702b0a846",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/InscriptionUtilisateur.html",
+            "seeds": [
+                {
+                    "id": "167641cd-3259-4037-84e4-ddb6f5e5caef",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/PasDeDispo.html",
+            "seeds": [
+                {
+                    "id": "1a56a048-3c6b-4cd9-b350-976084fe37e3",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/RdvNonConnecte.html",
+            "seeds": [
+                {
+                    "id": "aee401cc-5543-4910-905e-a0a86b500bbd",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/recherchePro.html",
+            "seeds": [
+                {
+                    "id": "65921598-8f86-477c-bc65-a9ab53e8d278",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/vuProRdv.html",
+            "seeds": [
+                {
+                    "id": "1913bf50-7cc3-4808-b4ff-51986d1f5e10",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        },
+        {
+            "file": "demo/src/main/resources/templates/vuUserRdv.html",
+            "seeds": [
+                {
+                    "id": "f35deb02-ff0b-40a3-a822-2f7e0fac7222",
+                    "featureKey": "319e2788-89d4-45c2-8d66-f9bb2434c840",
+                    "startLine": 6,
+                    "startColumn": 38,
+                    "endLine": 6,
+                    "endColumn": 53,
+                    "type": "Deletion",
+                    "isValidated": true
+                }
+            ]
+        }
+    ],
+    "fileSeeds": []
+}

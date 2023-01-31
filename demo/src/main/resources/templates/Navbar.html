@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8"/>
+    <title>NavigationBar</title>
+</head>
+<body>
+    <div>
+        <div th:fragment="navbar" class="navbar">
+            <div class="navbar navbar-default">
+                <ul class="nav navbar-nav"> 
+                    <li> <a href ="/"><img th:src="@{/images/docto2.png}"/> </a> </li>
+                    <li sec:authorize="hasRole('ANONYMOUS')"> <a class="link" href ="/inscriptionUtilisateur"> S'inscrire en tant qu'utilisateur </a> </li>
+                    <li sec:authorize="hasRole('ANONYMOUS')"> <a class="link" href ="/inscriptionPro"> S'inscrire en tant que professionnel</a> </li>
+                    <li sec:authorize="hasRole('ANONYMOUS')"> <a class="link" href ="/login"> Se connecter </a> </li>
+                    <li sec:authorize="hasRole('USER')"> <a class="link" th:href ="${'/utilisateur/profilUser?id='+{id}}"> Mes rendez-vous</a> </li>
+                    <li sec:authorize="hasRole('PRO')"> <a class="link" href ="/professionnel/profilPro"> Mes rendez-vous </a> </li>
+                    <li sec:authorize="hasRole('USER')"> <a class="link" th:href ="${'/utilisateur/profilUser/ChangeCoordPro?id='+{user_id}}"> Profil</a> </li>
+                    <li sec:authorize="hasRole('PRO')"> <a class="link" th:href ="${'/professionnel/profilPro/ChangeCoordPro?id='+{pro_id}}"> Profil </a> </li>
+                    <li sec:authorize="hasAnyRole('PRO', 'USER')"> <a class="link" href ="/logout"> Se deconnecter </a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

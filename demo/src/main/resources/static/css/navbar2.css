@@ -1,0 +1,41 @@
+div.navbar{
+    background-color: green;
+}
+
+.link {
+    color: black !important;
+    font-size: 30px; 
+    top: 50%; left: 0%; 
+    transform: translate(0%, 80%); 
+}
+
+.navbar-default {
+    border-color: green;
+}
+
+body{
+    background-color: white;
+
+}
+
+img{
+    width: 80%;
+    height: 100px;
+
+}
+
+label{
+    height: 40px;
+    font-size: 25px;
+    width: 600px;
+
+}
+
+.card-header{
+    height:  70px;
+    font-size: 40px;
+}
+
+table{
+    font-size: 20px;
+}

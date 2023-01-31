@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+</head>
+<body>
+
+  <!-- <div class="navbar navbar-default">
+    <ul class="nav navbar-nav"> 
+        <li> <a href ="/"> Home </a> </li>
+        <li sec:authorize="hasRole('ANONYMOUS')"> <a href ="/inscriptionUtilisateur"> S'inscrire en tant qu'utilisateur </a> </li>
+        <li sec:authorize="hasRole('ANONYMOUS')"> <a href ="/inscriptionPro"> S'inscrire en tant que professionnel</a> </li>
+        <li sec:authorize="hasRole('ANONYMOUS')"> <a href ="/login"> Se connecter </a> </li>
+        <li sec:authorize="hasRole('USER')"> <a th:href ="${'/utilisateur/profilUser?id='+{id}}"> Profil </a> </li>
+        <li sec:authorize="hasRole('PRO')"> <a th:href ="${'/professionnel/profilPro?id='+{id}}"> Profil </a> </li>
+        <li sec:authorize="hasAnyRole('PRO', 'USER')"> <a href ="/logout"> Se deconnecter </a> </li>
+    </ul>
+    
+  </div> -->
+
+
+  <div th:insert="/Navbar::navbar">  </div>
+
+  <div class="container mt-2">
+      <div class="card">
+          <div class="card-header">Liste de Professionnel</div>
+          <div class="card-body">
+              <form method="get" th:action="@{/listeByNom}">
+                  <label>Recherche par Nom du Professionnel</label>
+                  <input type="text" name="nom" th:value="${nom}">
+                  <button type="submit" class="btn btn-primary">Chercher</button>
+              </form>
+              <table class="table">
+                  <thead>
+                  <tr>
+                    <!-- <th>Id</th> -->
+                    <th>nom</th>
+                    <th>prenom</th>
+                    <th>adresse</th>
+                    <th>specialite</th>
+                    <th>jours de travail</th>
+                    <th>horaire</th>
+                    <th>telephone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="pro:${listProfessionnel}">
+                    <!-- <td th:text="${pro.id}"></td> -->
+                    <td th:text="${pro.nom}"></td>
+                    <td th:text="${pro.prenom}"></td>
+                    <td th:text="${pro.adresse}"></td>
+                    <td th:text="${pro.specialite}"></td>
+                    <td th:text="${pro.jourDebut}+' au '+${pro.jourFin}"></td>
+                    <td th:text="${pro.horaireDebut}+'h00 à '+${pro.horaireFin}+'h00'"></td>
+                    <td th:text="${pro.telephone}"></td>
+
+                    <td>
+                        <form method="get" th:action ="@{/disponibilite}" >
+                            <!-- c'est a laisse ce id la (c'est pas celui qui est co) -->
+                            <input type="hidden" name="id" th:value="${pro.id}"/>
+                            <input type="hidden" name="date" th:value="${ #temporals.format( T(java.time.LocalDate).now(), 'YYYY MM dd') }"/>
+                            <button type="submit" class="btn btn-primary"> disponibilite </button>
+                        </form>
+
+                    </td>
+                      
+                    <!-- <td>
+                        <a onclick="return confirm('Etes vous sure?')" class="btn btn-danger" th:href="@{delete(id=${pro.id}, nom=${nom})}">
+                            Delete
+                        </a>
+                    </td> -->
+
+
+
+                  </tr>
+                  </tbody>
+              </table>
+              <ul class="nav nav-pills">
+                  <li th:each="page,status:${pages}">
+                      <a th:class="${status.index==currentPage?'btn btn-primary ms-1':'btn btn-outline-primary ms-1'}"
+                         th:text="${status.index}"
+                         th:href="@{index(page=${status.index}, nom=${nom})}"
+                      ></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>
+

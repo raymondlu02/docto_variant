@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+</head>
+<body>
+  <!-- <div class="navbar navbar-default">
+        <ul class="nav navbar-nav"> 
+            <li> <a href ="/"> Home </a> </li>
+            <li> <a href ="/inscription"> S'inscrire </a> </li>
+            <li> <a href ="/connexion"> Se connecter </a> </li>
+        </ul>
+  </div> -->
+  
+
+  <div th:insert="/Navbar::navbar">  </div>
+
+  <div class="container mt-2">
+      <div class="card">
+          <div class="card-header">Liste de Professionnel</div>
+          <div class="card-body">
+              <form method="get" th:action="@{liste}">
+                  <label>Recherche par Nom du Professionnel</label>
+                  <input type="text" name="nom" th:value="${nom}">
+                  <button type="submit" class="btn btn-primary">Chercher</button>
+              </form>
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>nom</th>
+                      <th>prenom</th>
+                      <th>adresse</th>
+                      <th>horaire</th>
+                      <th>telephone</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr th:each="pro:${listProfessionnel}">
+                      <td th:text="${pro.id}"></td>
+                      <td th:text="${pro.nom}"></td>
+                      <td th:text="${pro.prenom}"></td>
+                      <td th:text="${pro.adresse}"></td>
+                      <td th:text="${pro.horaire}"></td>
+                      <td th:text="${pro.telephone}"></td>
+                      
+                      <td>
+                        <a href ="professionnel/disponibilite"> disponibilite </a>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+              <ul class="nav nav-pills">
+                  <li th:each="page,status:${pages}">
+                      <a th:class="${status.index==currentPage?'btn btn-primary ms-1':'btn btn-outline-primary ms-1'}"
+                         th:text="${status.index}"
+                         th:href="@{index(page=${status.index}, keyword=${keyword})}"
+                      ></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>
+

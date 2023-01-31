@@ -1,0 +1,22 @@
+{
+    "isAbsolutePath": false,
+    "resourcesPath": ".mobioos-forge/customization-file-resources",
+    "functionalityConfiguration": [
+        "498431b4-aa2c-4a3f-8c6f-731cecf0ca18",
+        "59ff8c05-02a0-4479-8292-8ef4695079be",
+        "4e2b1e52-8832-4420-a9ae-5bf3c3c64325",
+        "e93859e9-611f-4d29-95bc-66841968a2c4",
+        "711eb4ce-394c-4486-8e22-b81861a6456f",
+        "fd143f9b-8986-4e17-b72e-50eb8983f209"
+    ],
+    "fileResourceConfiguration": [
+        {
+            "key": "b59fb3f3-9d39-45f8-9d2d-f522bb569482",
+            "value": "demo/src/main/resources/static/images",
+            "fileName": "docto3.png"
+        }
+    ],
+    "textResourceConfiguration": [],
+    "assetResourceConfiguration": [],
+    "colorResourceConfiguration": []
+}

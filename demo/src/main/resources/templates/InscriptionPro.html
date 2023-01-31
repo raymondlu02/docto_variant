@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+</head>
+<body>
+
+  <!-- <div class="navbar navbar-default">
+    <ul class="nav navbar-nav"> 
+      <li> <a href ="/"> Home </a> </li>
+      <li> <a href ="/connexion"> Se connecter </a> </li>
+    </ul>
+  </div> -->
+
+  <div th:insert="/Navbar::navbar">  </div>
+
+
+  <div class="container mt-2">
+      <div class="card">
+          <div class="card-header">inscription</div>
+          <div class="card-body">
+              <form method="get" th:action="@{/inscription/addPro}">
+                  <label>nom</label>
+                  <input type="text" name="nom" th:value="${nom}">
+                  <br>  
+                  <label>prenom</label>
+                  <input type="text" name="prenom" th:value="${prenom}">
+                  <br> 
+                  <label>adresse</label>
+                  <input type="text" name="adresse" th:value="${adresse}">
+                  <br> 
+                  <label>horaireD</label>
+                  <input type="text" name="horaireDebut" th:value="${horaireD}">
+                  <br>
+                  <label>horaireF</label>
+                  <input type="text" name="horaireFin" th:value="${horaireF}">
+                  <br>
+                  <label>telephone</label>
+                  <input type="text" name="telephone" th:value="${telephone}">
+                  <br>
+                  <!-- th:style="color:red;" -->
+                  <div th:text="${msgMail}"></div>
+                  <label>mail</label>
+                  <input type="email" name="mail" th:value="${mail}">
+                  <br> 
+                  <label>jourDebut</label>
+                  <input type="text" name="jourDebut" th:value="${jourDebut}">
+                  <br> 
+                  <label>jourFin</label>
+                  <input type="text" name="jourFin" th:value="${jourFin}">
+                  <br> 
+                  <label>Specialite</label>
+                  <select name="specialite" id="specialite">
+                    <option value=""></option>
+                    <option value="generaliste">generaliste</option>
+                    <option value="specialiste">specialiste</option>
+                    <option value="infirmier">infirmier</option>
+                  </select>                  
+                  <br> 
+                  <label>mot de passe</label>
+                  <input type="password" name="password" th:value="${password}">
+                  <br> 
+
+                  <button type="submit" class="btn btn-primary"> S'inscrire </button>
+              </form>
+              
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>
+
